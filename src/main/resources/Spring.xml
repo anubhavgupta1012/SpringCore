@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"      "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="tri" class="com.shapes.Triangle" name="tri3">
+        <property name="point1" ref="pointA"></property>
+        <property name="point2">
+
+            <bean class="com.shapes.Points">
+                <property name="x" value="-20"/>
+                <property name="y" value="0"/>
+            </bean>
+
+        </property>
+        <property name="point3">
+
+            <bean class="com.shapes.Points">
+                <property name="x" value="220"/>
+                <property name="y" value="0"/>
+            </bean>
+
+        </property>
+
+    </bean>
+
+    <bean id="pointA" class="com.shapes.Points">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <alias name="tri" alias="tri2"/>
+
+</beans>
