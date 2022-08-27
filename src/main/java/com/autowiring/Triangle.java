@@ -1,30 +1,37 @@
 package com.autowiring;
-@Data
+
+
 public class Triangle {
     Points pointA, pointB, pointC;
 
-    public Points getPointA() {
-        return pointA;
+    public Triangle(Points pointA, Points pointB, Points pointC) {
+        this.pointA = pointA;
+        this.pointB = pointB;
+        this.pointC = pointC;
     }
 
-    public void setPointA(Points pointA) {
-        this.pointA = pointA;
+
+    /*    public void setPointA(Points pointA) {
+            this.pointA = pointA;
+        }
+
+        public void setPointB(Points pointB) {
+            this.pointB = pointB;
+        }
+
+        public void setPointC(Points pointC) {
+            this.pointC = pointC;
+        }*/
+    public Points getPointA() {
+        return pointA;
     }
 
     public Points getPointB() {
         return pointB;
     }
 
-    public void setPointB(Points pointB) {
-        this.pointB = pointB;
-    }
-
     public Points getPointC() {
         return pointC;
-    }
-
-    public void setPointC(Points pointC) {
-        this.pointC = pointC;
     }
 
     public void draw() {
