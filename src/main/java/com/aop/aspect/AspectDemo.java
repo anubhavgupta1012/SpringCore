@@ -5,9 +5,9 @@ import org.aspectj.lang.annotation.Before;
 
 @Aspect
 public class AspectDemo {
-	
-	@Before("execution(public String com.model.Circle.getName())")
-	public void DoSomthing() {
-		System.out.println("This is the aspect2");
-	}
+
+    @Before("execution(public * get*())")
+    public void DoSomthing() {
+        System.out.println("This is the aspect2");
+    }
 }

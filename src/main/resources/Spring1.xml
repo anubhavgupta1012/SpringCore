@@ -21,7 +21,5 @@
 
     <aop:aspectj-autoproxy/>
 
-    <bean class="com.aop.aspect.AspectDemo2"/>
-    <bean class="com.aop.aspect.WildCardAspect"/>
-
+    <bean class="com.aop.aspect.JoinPointAspect"/>
 </beans>

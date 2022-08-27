@@ -9,22 +9,24 @@ import org.aspectj.lang.annotation.Pointcut;
 public class WildCardAspect {
 
     @Before("ABC()&&ABC2()")
-    public void DoSomthing() {
+    public void doSomthing() {
         System.out.println("This is the aspect");
     }
 
     @Before("ABC()")
-    public void DoSomthing2() {
+    public void doSomthing2() {
         System.out.println("this is method 2");
     }
 
     @Pointcut("execution( * get*())")
     public void ABC() {
+        //Dummy method
     }
 
 
     @Pointcut("within(com.model.*)")
     public void ABC2() {
+        //Dummy methods
     }
 
     @Before("args(name)")

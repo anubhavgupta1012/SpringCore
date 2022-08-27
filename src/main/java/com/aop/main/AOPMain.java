@@ -11,7 +11,7 @@ public class AOPMain {
         ShapeService ss = (ShapeService) ap.getBean("shape");
         ss.xyz("Dheeraj");
         Circle c = ss.getC();
-        //System.out.println(c.getName());
+        System.out.println(c.getName());
         //System.out.println("================================");
         ss.getC().ABC();
     }
