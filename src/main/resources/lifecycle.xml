@@ -3,7 +3,7 @@
 <beans default-init-method="initm" default-destroy-method="desm">
 
 	<bean id="triangle" class="com.lifecycle.Triangle"
-		autowire="byName">
+		autowire="byName" scope="prototype">
 
 	</bean>
 	<bean id="triangle1" class="com.lifecycle.Triangle1"
