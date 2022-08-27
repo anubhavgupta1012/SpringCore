@@ -8,7 +8,7 @@ public class Drawing {
 
     public static void main(String[] args) {
         ApplicationContext ac = new ClassPathXmlApplicationContext("autowiredAnnotation.xml");
-        Shape t = (Shape) ac.getBean("circle");
+        Shape t = (Shape) ac.getBean("triangle");
         t.draw();
     }
 }

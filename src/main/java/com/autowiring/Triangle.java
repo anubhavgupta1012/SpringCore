@@ -1,6 +1,9 @@
 package com.autowiring;
 
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class Triangle {
     Points pointA, pointB, pointC;
 
@@ -38,5 +41,15 @@ public class Triangle {
         System.out.println("Point A(" + pointA.getX() + "\t" + pointA.getY() + ")");
         System.out.println("Point B(" + pointB.getX() + "\t" + pointB.getY() + ")");
         System.out.println("Point C(" + pointC.getX() + "\t" + pointC.getY() + "))");
+    }
+
+    @PostConstruct
+    public void test1() {
+        System.out.println("before");
+    }
+
+    @PreDestroy
+    public void test2() {
+        System.out.println("before");
     }
 }
